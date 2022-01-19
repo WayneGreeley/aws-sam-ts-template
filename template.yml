@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Description: An example HelloLambda RESTful service
+Resources:
+  HelloLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./release
+      Runtime: nodejs14.x
+      Handler: index.handler
+      Events:
+        EndPoint:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: get
+
+Outputs:
+  endpoint:
+    Description: "The API Gateway for HelloLambda Example."
+    Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Stage/hello' 

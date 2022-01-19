@@ -1,0 +1,22 @@
+{
+  "name": "aws-sam-ts",
+  "version": "1.0.0",
+  "description": "A template AWS SAM typescript application.",
+  "main": "release/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Wayne Greeley",
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/node14": "^1.0.0",
+    "@types/aws-lambda": "^8.10.51",
+    "ts-loader": "^9.2.2",
+    "typescript": "^4.2.3",
+    "npm-force-resolutions": "0.0.10"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.437.0",
+    "source-map-support": "^0.5.19"
+  }
+}
