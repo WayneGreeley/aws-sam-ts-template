@@ -20,7 +20,6 @@ sam deploy --guided
 
 
 # delete resources
-aws cloudformation delete-stack --stack-name $STACK_NAME
+sam delete --no-prompts
 
 ```
-
